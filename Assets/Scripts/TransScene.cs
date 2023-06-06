@@ -17,7 +17,7 @@ public class TransScene : MonoBehaviour
         
     }
     
-    public void Trans()
+    public void MainTrans()
     {
         var button = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
         switch (button.name) {
@@ -28,11 +28,20 @@ public class TransScene : MonoBehaviour
                 SceneManager.LoadScene(0);
                 break;
             case "Vehicle Button": 
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
                 break;
             case "Option Button": 
                 SceneManager.LoadScene(0);
                 break;
+            case "Quit Button":
+                Application.Quit();
+                break;
         }
+    }
+
+    public void VehicleTrans()
+    {
+        var button = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+        if (button.name == "Back Button") SceneManager.LoadScene(0);
     }
 }

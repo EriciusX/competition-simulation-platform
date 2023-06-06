@@ -265,10 +265,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Scene
+  m_text: "\u573A\u5730"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5bcf75b976eddd042a3fb5a2f737dbd7, type: 2}
+  m_sharedMaterial: {fileID: 4737857407073712638, guid: 5bcf75b976eddd042a3fb5a2f737dbd7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -501,10 +501,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: "\u5F00\u59CB"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5bcf75b976eddd042a3fb5a2f737dbd7, type: 2}
+  m_sharedMaterial: {fileID: 4737857407073712638, guid: 5bcf75b976eddd042a3fb5a2f737dbd7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -757,7 +757,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709484982}
         m_TargetAssemblyTypeName: TransScene, Assembly-CSharp
-        m_MethodName: Trans
+        m_MethodName: MainTrans
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -907,7 +907,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709484982}
         m_TargetAssemblyTypeName: TransScene, Assembly-CSharp
-        m_MethodName: Trans
+        m_MethodName: MainTrans
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1013,10 +1013,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Option
+  m_text: "\u8BBE\u7F6E"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5bcf75b976eddd042a3fb5a2f737dbd7, type: 2}
+  m_sharedMaterial: {fileID: 4737857407073712638, guid: 5bcf75b976eddd042a3fb5a2f737dbd7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1148,10 +1148,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: "\u9000\u51FA"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5bcf75b976eddd042a3fb5a2f737dbd7, type: 2}
+  m_sharedMaterial: {fileID: 4737857407073712638, guid: 5bcf75b976eddd042a3fb5a2f737dbd7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1435,7 +1435,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709484982}
         m_TargetAssemblyTypeName: TransScene, Assembly-CSharp
-        m_MethodName: Trans
+        m_MethodName: MainTrans
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1585,7 +1585,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709484982}
         m_TargetAssemblyTypeName: TransScene, Assembly-CSharp
-        m_MethodName: Trans
+        m_MethodName: MainTrans
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1691,10 +1691,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Vehicle
+  m_text: "\u8F7D\u5177"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5bcf75b976eddd042a3fb5a2f737dbd7, type: 2}
+  m_sharedMaterial: {fileID: 4737857407073712638, guid: 5bcf75b976eddd042a3fb5a2f737dbd7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1870,7 +1870,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709484982}
         m_TargetAssemblyTypeName: TransScene, Assembly-CSharp
-        m_MethodName: Trans
+        m_MethodName: MainTrans
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

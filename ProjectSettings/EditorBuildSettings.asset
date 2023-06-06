@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 71d764662863be0449fd971072959200
+  - enabled: 1
+    path: Assets/Scenes/VehicleEditor.unity
+    guid: 71bf9531a198bcd4f8436b60a90a0f4a
   m_configObjects: {}
