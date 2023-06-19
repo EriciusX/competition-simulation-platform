@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraControl : MonoBehaviour
-{
+public class CameraControl : MonoBehaviour {
 
     public float minimumY = -30f, maximumY = 90f;
     public float ScrollWheel_min = 20, ScrollWheel_max = 50;
@@ -15,41 +14,35 @@ public class CameraControl : MonoBehaviour
     private string[] keys = {"w", "a", "s", "d", "up", "down", "right", "left", "space", "left ctrl"};
     private Vector3 cam_pos;
 
-    void Start()
-    {
+    void Start() {
         rotationX = transform.localEulerAngles.y;
         rotationY = transform.localEulerAngles.x;
     }
 
-    void Update()
-    {
+    void Update() {
         if (Input.mousePresent)
         {
             float Camer_Size = Camera.main.orthographicSize;
-            if (Input.GetMouseButton(2))
-            {
+            if (Input.GetMouseButton(2)) {
                 rotationX += Input.GetAxis("Mouse X") * sensitivity;
                 rotationY -= Input.GetAxis("Mouse Y") * sensitivity;
                 rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
                 transform.localEulerAngles = new Vector3(rotationY, rotationX, 0);
             }
-            if (Input.GetMouseButton(1))
-            {
+            if (Input.GetMouseButton(1)) {
                 xInput += Input.GetAxis("Mouse X") * moveSpeed;
                 yInput += Input.GetAxis("Mouse Y") * moveSpeed;
                 transform.Translate(Vector3.forward * yInput * Time.deltaTime);
                 transform.Translate(Vector3.right * xInput * Time.deltaTime);
             }
         }
-        if (Input.GetAxis("Mouse ScrollWheel") != 0)
-        {
+        if (Input.GetAxis("Mouse ScrollWheel") != 0) {
             // 滚轮改变缩放
             Camera.main.fieldOfView = Camera.main.fieldOfView - (Input.GetAxis("Mouse ScrollWheel") * ScrollWheelSpeed);
             // 限制size缩放大小
             Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, ScrollWheel_min, ScrollWheel_max);
         }
-        if (string.Join("", keys).IndexOf(Input.inputString) != -1)
-        {
+        if (string.Join("", keys).IndexOf(Input.inputString) != -1) {
             xInput = Input.GetAxis("Vertical") * moveSpeed;
             yInput = Input.GetAxis("Horizontal") * moveSpeed;
             zInput = Input.GetAxis("Jump") * moveSpeed;
@@ -65,5 +58,4 @@ public class CameraControl : MonoBehaviour
             transform.position = new Vector3(tempx, tempy, tempz);
         }
     }
-
 }
