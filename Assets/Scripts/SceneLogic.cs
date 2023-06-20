@@ -7,8 +7,8 @@ public class SceneLogic : MonoBehaviour
 {
     public GameObject UIMain;
     public GameObject UIOpen;
+    public GameObject UIComponent;
     public GameObject UILocal;
-    public GameObject UIParam;
 
     private int state = 0;
     private int preState = 0;
@@ -22,7 +22,7 @@ public class SceneLogic : MonoBehaviour
                 OpenInterface();
                 preState = state;
                 break;
-            case "Param Button":
+            case "Component Button":
                 state = 2;
                 OpenInterface();
                 preState = state;
@@ -38,22 +38,24 @@ public class SceneLogic : MonoBehaviour
 
     private void OpenInterface()
     {
-        if (state == 1)
-        {
+        if (state == 1) {
             UIOpen.SetActive(true);
+            UIMain.SetActive(false);
+        } else if (state == 2) {
+            UIComponent.SetActive(true);
             UIMain.SetActive(false);
         }
     }
 
     private void Back()
     {
-        if (preState == 1)
-        {
+        if (preState == 2) {
+            UIComponent.SetActive(false);
+            UIMain.SetActive(true);
+        } else if (preState == 1) {
             UIOpen.SetActive(false);
             UIMain.SetActive(true);
-        }
-        else if (preState == 0)
-        {
+        } else if (preState == 0) {
             SceneManager.LoadScene(0);
         }
         preState = state;

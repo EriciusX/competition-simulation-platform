@@ -24,8 +24,7 @@ public class CameraControl : MonoBehaviour {
 
     void Update() {
         // 视角
-        if (Input.mousePresent)
-        {
+        if (Input.mousePresent) {
             float Camer_Size = Camera.main.orthographicSize;
             if (Input.GetMouseButton(2)) {
                 rotationX += Input.GetAxis("Mouse X") * sensitivity;

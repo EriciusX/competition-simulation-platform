@@ -38,8 +38,7 @@ public class VehicleLogic : MonoBehaviour
 
     private void OpenInterface()
     {
-        if (state == 1)
-        {
+        if (state == 1) {
             UIOpen.SetActive(true);
             UIMain.SetActive(false);
         }
@@ -47,13 +46,10 @@ public class VehicleLogic : MonoBehaviour
 
     private void Back()
     {
-        if (preState == 1)
-        {
+        if (preState == 1) {
             UIOpen.SetActive(false);
             UIMain.SetActive(true);
-        }
-        else if (preState == 0)
-        {
+        } else if (preState == 0) {
             SceneManager.LoadScene(0);
         }
         preState = state;
