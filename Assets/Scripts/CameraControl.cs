@@ -13,13 +13,17 @@ public class CameraControl : MonoBehaviour {
     private float xInput, yInput, zInput;
     private string[] keys = {"w", "a", "s", "d", "up", "down", "right", "left", "space", "left ctrl"};
     private Vector3 cam_pos;
+    private string objectName;
 
     void Start() {
+        GameObject gameObject = this.gameObject;
+        objectName = gameObject.name;
         rotationX = transform.localEulerAngles.y;
         rotationY = transform.localEulerAngles.x;
     }
 
     void Update() {
+        // 视角
         if (Input.mousePresent)
         {
             float Camer_Size = Camera.main.orthographicSize;
@@ -27,22 +31,26 @@ public class CameraControl : MonoBehaviour {
                 rotationX += Input.GetAxis("Mouse X") * sensitivity;
                 rotationY -= Input.GetAxis("Mouse Y") * sensitivity;
                 rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
+                if (objectName == "Camera Point") rotationY = 0;
+                if (objectName == "Main Camera") rotationX = 0;
                 transform.localEulerAngles = new Vector3(rotationY, rotationX, 0);
             }
-            if (Input.GetMouseButton(1)) {
+            if (Input.GetMouseButton(1) && objectName == "Camera Point") {
                 xInput += Input.GetAxis("Mouse X") * moveSpeed;
                 yInput += Input.GetAxis("Mouse Y") * moveSpeed;
                 transform.Translate(Vector3.forward * yInput * Time.deltaTime);
                 transform.Translate(Vector3.right * xInput * Time.deltaTime);
             }
         }
-        if (Input.GetAxis("Mouse ScrollWheel") != 0) {
+        // 缩放
+        if (Input.GetAxis("Mouse ScrollWheel") != 0 && objectName == "Main Camera") {
             // 滚轮改变缩放
             Camera.main.fieldOfView = Camera.main.fieldOfView - (Input.GetAxis("Mouse ScrollWheel") * ScrollWheelSpeed);
             // 限制size缩放大小
             Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, ScrollWheel_min, ScrollWheel_max);
         }
-        if (string.Join("", keys).IndexOf(Input.inputString) != -1) {
+        // 移动
+        if (string.Join("", keys).IndexOf(Input.inputString) != -1 && objectName == "Camera Point") {
             xInput = Input.GetAxis("Vertical") * moveSpeed;
             yInput = Input.GetAxis("Horizontal") * moveSpeed;
             zInput = Input.GetAxis("Jump") * moveSpeed;

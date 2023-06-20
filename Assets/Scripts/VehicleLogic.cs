@@ -21,7 +21,6 @@ public class VehicleLogic : MonoBehaviour
                 state = 1;
                 OpenInterface();
                 preState = state;
-                print(preState);
                 break;
             case "Param Button":
                 state = 2;
